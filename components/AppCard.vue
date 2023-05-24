@@ -25,7 +25,7 @@ const props = defineProps({
 .card {
   background: hsl(0, 0%, 100%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
+  min-width: 300px;
   &__img {
     width: 100%;
     height: 150px;

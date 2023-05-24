@@ -1,27 +1,29 @@
 <template>
-  <div class="container">
-    <section class="filter">
-      <AppInput
-        v-model="searchText"
-        placeholder="Search for a country..."
-        icon="fa-search"
-      />
-      <AppSelectOption :options="getRegions" v-model="selectedRegion" />
-    </section>
-    <section class="cards">
-      <div v-for="country in getCountries" :key="country.name">
-        <NuxtLink
-          style="text-decoration: none; color: inherit"
-          :to="'/details/' + country.name"
-          ><AppCard
-            :src="country.flags.svg"
-            :title="country.name"
-            :details="getCountryDetails(country)"
-          ></AppCard
-        ></NuxtLink>
-      </div>
-    </section>
-  </div>
+  <section class="filter">
+    <AppInput
+      v-model="searchText"
+      placeholder="Search for a country..."
+      icon="fa-search"
+    />
+    <AppSelectOption :options="getRegions" v-model="selectedRegion" />
+  </section>
+  <section class="cards">
+    <div
+      class="cards__item"
+      v-for="country in getCountries"
+      :key="country.alpha3Code"
+    >
+      <NuxtLink
+        style="text-decoration: none; color: inherit"
+        :to="'/details/' + country.alpha3Code"
+        ><AppCard
+          :src="country.flags.svg"
+          :title="country.name"
+          :details="getCountryDetails(country)"
+        ></AppCard
+      ></NuxtLink>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -57,7 +59,7 @@ const getCountryDetails = computed(() => {
 });
 
 const getRegions = computed(() => {
-  return countries.value.reduce((acc, curr) => {
+  return countries.value?.reduce((acc, curr) => {
     if (acc.indexOf(curr.region) === -1) acc.push(curr.region);
     return acc;
   }, []);
@@ -65,17 +67,19 @@ const getRegions = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding: 40px 60px;
-}
 .filter {
   display: flex;
   justify-content: space-between;
 }
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   grid-gap: 50px;
-  margin-top: 40px;
+  &__item {
+    flex-grow: 1;
+  }
 }
 </style>
