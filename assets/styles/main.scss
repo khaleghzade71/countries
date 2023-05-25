@@ -1,10 +1,13 @@
+@import "./theme";
+
 body {
   font-family: "Nunito Sans", Fallback, sans-serif;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--background);
   margin: 0;
   * {
     border: none;
     outline: none;
+    color: var(--text);
   }
 }
 @font-face {

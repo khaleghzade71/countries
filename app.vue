@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-theme="light">
     <TheHeader />
     <div class="container">
       <NuxtPage />
@@ -7,8 +7,11 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   padding: 40px 60px;
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
 }
 </style>

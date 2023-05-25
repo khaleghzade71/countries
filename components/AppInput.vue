@@ -20,12 +20,15 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .input {
-  background: hsl(0, 0%, 100%);
+  background: var(--element);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  width: 400px;
+  width: 300px;
   padding: 10px 20px;
   display: flex;
   border-radius: 4px;
+  input {
+    background: inherit;
+  }
   &__text {
     flex-grow: 1;
     margin-left: 20px;

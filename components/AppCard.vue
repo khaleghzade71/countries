@@ -23,7 +23,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .card {
-  background: hsl(0, 0%, 100%);
+  background: var(--element);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   min-width: 300px;
   &__img {

@@ -17,7 +17,7 @@
         style="text-decoration: none; color: inherit"
         :to="'/details/' + country.alpha3Code"
         ><AppCard
-          :src="country.flags.svg"
+          :src="country.flags?.svg"
           :title="country.name"
           :details="getCountryDetails(country)"
         ></AppCard
@@ -70,6 +70,8 @@ const getRegions = computed(() => {
 .filter {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  grid-gap: 20px;
 }
 .cards {
   margin-top: 50px;

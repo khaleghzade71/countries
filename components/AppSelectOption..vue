@@ -20,7 +20,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .select {
-  background: hsl(0, 0%, 100%);
+  background: var(--element);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 10px;
 }
