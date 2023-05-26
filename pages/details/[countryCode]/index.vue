@@ -1,9 +1,9 @@
 <template>
-  <NuxtLink to="/">
+  <NuxtLink to="/" style="text-decoration: none; color: inherit">
     <AppButton title="Back" icon="fa-long-arrow-left" />
   </NuxtLink>
   <section class="details">
-    <img class="details__img" :src="country?.flags?.svg" />
+    <img class="details__img" :src="country?.flag" />
     <div class="details__text">
       <p class="details__title">{{ country.name }}</p>
       <div class="details__statistics">

@@ -24,12 +24,14 @@ const props = defineProps({
 <style lang="scss" scoped>
 .card {
   background: var(--element);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: var(--boxShadow);
   min-width: 300px;
+  border-radius: 4px;
   &__img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    border-radius: 4px;
   }
   &__text {
     padding: 10px 20px;

@@ -2,16 +2,19 @@
   --text: hsl(200, 15%, 8%);
   --element: hsl(0, 0%, 100%);
   --background: hsl(0, 0%, 98%);
+  --boxShadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 html[data-theme="light"] {
   --text: hsl(200, 15%, 8%);
   --element: hsl(0, 0%, 100%);
   --background: hsl(0, 0%, 98%);
+  --boxShadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 html[data-theme="dark"] {
   --text: hsl(0, 0%, 100%);
   --element: hsl(209, 23%, 22%);
   --background: hsl(207, 26%, 17%);
+  --boxShadow: rgba(116, 111, 111, 0.1) 0px 4px 6px;
 }

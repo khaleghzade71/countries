@@ -3,7 +3,7 @@
     <AppInput
       v-model="searchText"
       placeholder="Search for a country..."
-      icon="fa-search"
+      icon="fa-solid fa-search"
     />
     <AppSelectOption :options="getRegions" v-model="selectedRegion" />
   </section>
@@ -17,7 +17,7 @@
         style="text-decoration: none; color: inherit"
         :to="'/details/' + country.alpha3Code"
         ><AppCard
-          :src="country.flags?.svg"
+          :src="country.flag"
           :title="country.name"
           :details="getCountryDetails(country)"
         ></AppCard

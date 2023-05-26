@@ -6,6 +6,7 @@
       class="header__mode"
       id="theme-toggle"
       title="Dark Mode"
+      icon="fa-solid fa-moon"
     ></AppButton>
   </div>
 </template>
@@ -26,7 +27,7 @@ const toggleTheme = () => {
   background: var(--element);
   display: flex;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: var(--boxShadow);
   justify-content: space-between;
   padding: 0px 40px;
   @media (max-width: 480px) {

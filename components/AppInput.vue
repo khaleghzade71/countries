@@ -1,12 +1,12 @@
 <template>
   <div class="input">
-    <font-awesome-icon :style="{ color: 'gray' }" :icon="icon" />
     <input
       :placeholder="placeholder"
       class="input__text"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
     />
+    <font-awesome-icon :style="{ color: 'gray' }" :icon="icon" />
   </div>
 </template>
 
@@ -21,17 +21,22 @@ const props = defineProps({
 <style lang="scss" scoped>
 .input {
   background: var(--element);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  width: 300px;
-  padding: 10px 20px;
+  box-shadow: var(--boxShadow);
+  width: 500px;
+  padding: 16px 24px;
   display: flex;
   border-radius: 4px;
+  display: flex;
+  flex-direction: row-reverse;
   input {
     background: inherit;
   }
   &__text {
     flex-grow: 1;
     margin-left: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 300px;
   }
 }
 </style>
