@@ -61,12 +61,15 @@ const { data: country } = await useFetch(
   margin-top: 50px;
   justify-content: space-between;
   flex-wrap: wrap;
+  grid-gap: 50px;
   &__img {
-    width: 400px;
-    height: 300px;
+    width: 40% ;
+    height: auto;
+    flex-grow: 1;
   }
   &__text {
     font-size: 0.875rem;
+    flex-grow: 1;
   }
   &__title {
     font-weight: 800;

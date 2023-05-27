@@ -29,7 +29,7 @@ const props = defineProps({
   border-radius: 4px;
   &__img {
     width: 100%;
-    height: 150px;
+    aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 4px;
   }

@@ -75,11 +75,19 @@ const getRegions = computed(() => {
 }
 .cards {
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
   grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  @media (max-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
   &__item {
     flex-grow: 1;
   }
